@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Projects by Ricardo Garcia{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div>
+  <p id="summary" class="content">This website is built on a PostgreSQL/Python/Django stack to demonstrate my web development skills. My first application will be called 'Logger' which will display the data being continuously uploaded from a raspberry pi with a sensor. Today is 
+  </p>
+</div>
+
+<h1 class="container-names">Applications</h1>
+<div class="parent-container">
+  <div class="content">
+    <div class="app-button">
+      <a class="app-name" href='logger.html'><h2>Logger</h2><img src="img/logicon.jpeg" alt="Application_1">
+    </div>
+    <div class="app-button">
+      <a class="app-name" href=''><h2>App2</h2><img src="img/app2.png" alt="Application_2">
+    </div> 
+    <div class="app-button">
+      <a class="app-name" href=''><h2>App3</h2><img src="img/app3.png" alt="Application_3">
+    </div>
+  </div>
+</div>
+  <script src="index.js"></script>
+
+{% endblock %}
