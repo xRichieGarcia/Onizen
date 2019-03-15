@@ -1,19 +1,33 @@
 <!doctype html>
 <title>{% block title %}{% endblock %} | Onizen</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<nav>
-  <h1><a href="{{ url_for('home.index') }}"> Onizen</h1>
-  <ul>
-    <li><a href="{{ url_for('home.gallery') }}">Gallery</a>
-    <li><a href="{{ url_for('home.resume') }}">Resume</a>
-  </ul>
+
+<nav class="nav-bar">
+  <div id="logo">
+    <a href="{{ url_for('home.index') }}">
+      <img src="{{url_for('static/images', filename='bassnectar.png')}}" />
+    </a>
+  </div>
+  <div id="menu">
+    <ul>
+      <li><a href="">Gallery</a>
+      <li><a href="{{ url_for('home.resume') }}">Resume</a>
+    </ul>
+  </div>
 </nav>
+
 <section class="content">
-  <header>
+
+  <header class="head">
     {% block header %}{% endblock %}
   </header>
+
+<!-- error msgs commented out for now
   {% for message in get_flashed_messages() %}
     <div class="flash">{{ message }}</div>
   {% endfor %}
+-->
+
   {% block content %}{% endblock %}
+
 </section>

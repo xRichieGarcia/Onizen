@@ -1,0 +1,4 @@
+include onizen/schema.sql
+graft onizen/static
+graft onizen/templates
+global -exclude *.pyc
